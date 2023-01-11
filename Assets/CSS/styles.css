@@ -34,6 +34,7 @@ body {
 }
 .header.sticky {
     background-color: var(--second-bg-color);
+    z-index: 100;
 }
 .nav {
     align-items: center;
@@ -123,20 +124,189 @@ span {
 .about div {
     width: 50%;
 }
-.about-content p {
+.about-content {
+    align-items: center;
+    justify-content: flex-start;
+}
+.about-inner-content h1 {
+    font-size: 60px;
+}
+.about-inner-content p {
     color: var(--second-color);
 }
-
+.about-image img {
+    margin: -20px 0 0 20px;
+}
 
 /*********** SERVICES SECTION STYLES *************/
-.service {
+.services-section {
+    background-color: var(--second-bg-color);
+}
+.services-upper-text {
     text-align: center;
-    background-color: var(--main-color);
+}
+.services-upper-text h2 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1;
+    margin: 12px 0;
+}
+.service {
+    background-color: var(--bg-color);
     padding: 24px 35px;
     border-radius: 6px;
     margin: 8px 0;
+    transition: all .45s ease;
 }
+.service:hover {
+    transform: translateY(-8px);
+}
+/* .service:last-child h3 {
+    font-weight: 600;
+} */
 .service p:first-child {
     font-size: 80px;
+    margin-bottom: 0;
+}
+.service p:last-child {
+    color: var(--second-color);
+}
 
+/************** PORTFOLIO SECTION STYELS ***************/
+.portfolio-upper-text {
+    text-align: center;
+}
+.portfolio-upper-text p {
+    font-size: 20px;
+    margin-bottom: 0;
+    color: var(--second-color);
+}
+.portfolio-upper-text h2 {
+    font-size: 45px;
+    font-weight: 600;
+}
+.project {
+    position: relative;
+    margin: 20px 0 12px 0;
+}
+.project img {
+    width: 100%;
+    border-radius: 6px;
+    transition: all .45s ease;
+}
+.project:hover img {
+    transform: scale(0.98);
+}
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), #ff004f);
+    position: absolute;
+    border-radius: 6px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: all .45s ease;
+}
+.layer h4 {
+    font-weight: 500;
+}
+.layer p {
+    color: var(--second-color);
+}
+.layer i {
+    width: 60px;
+    height: 60px;
+    background: var(--text-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.project:hover .layer {
+    height: 100%;
+}
+
+/*********** CONTACT SECTION STYLES ***********/
+.contact-section {
+    background-color: var(--second-bg-color);
+}
+.contact-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact-inner div {
+    width: 50%;
+}
+.contact-text h2 {
+    font-size: 45px;
+    font-weight: 600;
+}
+.contact-text h4 {
+    font-size: 25px;
+    color: var(--second-color);
+    margin: 15px 0;
+}
+.contact-info li {
+    margin: 8px 0;
+    transition: all .45s ease;
+}
+.contact-info li a {
+    color: var(--second-color);
+}
+.contact-info li:hover {
+    transform: translateX(5px);
+    color: var(--text-color);
+} 
+.contact-links {
+    margin-top: 15px;
+}
+.contact-links li a i {
+    color: var(--text-color);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid var(--main-color);
+    font-size: 28px;
+    margin-right: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .45s ease;
+}
+.contact-links li a i:hover {
+    transform: scale(0.9);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+form input, form textarea {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    padding: 8px 12px;
+    margin: 8px 0;
+    width: 100%;
+    border-radius: 6px;
+}
+form textarea {
+    resize: none;
+}
+form .send-btn {
+    background-color: var(--main-color);
+}
+
+.end {
+    padding: 18px 0;
+    text-align: center;
+}
+.end p {
+    margin-bottom: 0;
+    color: var(--second-color);
 }
